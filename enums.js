@@ -1,85 +1,85 @@
 
 const BATTLEREASONS = {
-    ATTACK : "Attack",
-    GUARD : "Guard",
-    METABOLISM : "Metabolism",
-    DEPLOY : "Deploy",
-    CONTROLLEDMOVE : "Controlled Move",
-    COLLISIONWALL : "Collision (Wall)",
-    COLLISIONDIRECTED : "Collision (Directed)",
-    COLLISIONBACKLASH : "Collision (Backlash)",
-    PRIMARYATTACK : "Primary Attack",
-    SECONDARYATTACK : "Secondary Attack",
-    BURNING : "Burning",
-    BERSERK : "Berserk",
-    BULKY : "Bulky",
-    POISONED : "Poisoned",
-    BLEEDING : "Bleeding",
-    SHOCKED : "Shocked",
-    EXPLOSION : "Explosion",
-    PRESSURE : "Pressure",
-    DESTROYER : "Destroyer",
-    PETRIFY : "Petrify",
-    VULNERABLE : "Vulnerable",
-    CHAINED : "Chained",
-    FROZEN : "Frozen",
-    SHELLED : "Shelled",
-    CRAZED : "Crazed",
-    QUICKNESS : "Quickness",
-    RAGE : "Rage",
-    SAVANT : "Savant",
-    SUNDERED : "Sundered",
-    EMPOWERED : "Empowered",
-    WEAK : "Weak",
-    MENDING : "Mending",
-    LINK : "Link",
-    LEECHING : "Leeching",
-    BARRIER : "Barrier",
-    REPULSE : "Repulse",
-    SILENCED : "Silenced",
-    VACUUM : "Vacuum",
-    UNMENDING : "Unmending",
-    SAP : "Sap",
-    SUREFOOTED : "SureFooted",
-    FIRE : "Fire",
-    EARTH : "Earth",
-    WATER : "Water",
-    AIR : "Air",
-    HORSEDUNG : "Horse Dung",
-    LODESTONE : "Lodestone",
-    MULTIPLICATION : "Multiplication",
-    COPPER : "Copper",
-    LEAD : "Lead",
-    IRON : "Iron",
-    REGULUSOFIRON : "Regulus Of Iron",
-    SOUL : "Soul",
-    CALCINATION : "Calcination",
-    FERMENTATION : "Fermentation",
+    ATTACK : "BATTLEREASONS.ATTACK",
+    GUARD : "BATTLEREASONS.GUARD",
+    METABOLISM : "BATTLEREASONS.METABOLISM",
+    DEPLOY : "BATTLEREASONS.DEPLOY",
+    CONTROLLEDMOVE : "BATTLEREASONS.CONTROLLEDMOVE",
+    COLLISIONWALL : "BATTLEREASONS.COLLISIONWALL",
+    COLLISIONDIRECTED : "BATTLEREASONS.COLLISIONDIRECTED",
+    COLLISIONBACKLASH : "BATTLEREASONS.COLLISIONBACKLASH",
+    PRIMARYATTACK : "BATTLEREASONS.PRIMARY ATTACK",
+    SECONDARYATTACK : "BATTLEREASONS.SECONDARY ATTACK",
+    BURNING : "BATTLEREASONS.BURNING",
+    BERSERK : "BATTLEREASONS.BERSERK",
+    BULKY : "BATTLEREASONS.BULKY",
+    POISONED : "BATTLEREASONS.POISONED",
+    BLEEDING : "BATTLEREASONS.BLEEDING",
+    SHOCKED : "BATTLEREASONS.SHOCKED",
+    EXPLOSION : "BATTLEREASONS.EXPLOSION",
+    PRESSURE : "BATTLEREASONS.PRESSURE",
+    DESTROYER : "BATTLEREASONS.DESTROYER",
+    PETRIFY : "BATTLEREASONS.PETRIFY",
+    VULNERABLE : "BATTLEREASONS.VULNERABLE",
+    CHAINED : "BATTLEREASONS.CHAINED",
+    FROZEN : "BATTLEREASONS.FROZEN",
+    SHELLED : "BATTLEREASONS.SHELLED",
+    CRAZED : "BATTLEREASONS.CRAZED",
+    QUICKNESS : "BATTLEREASONS.QUICKNESS",
+    RAGE : "BATTLEREASONS.RAGE",
+    SAVANT : "BATTLEREASONS.SAVANT",
+    SUNDERED : "BATTLEREASONS.SUNDERED",
+    EMPOWERED : "BATTLEREASONS.EMPOWERED",
+    WEAK : "BATTLEREASONS.WEAK",
+    MENDING : "BATTLEREASONS.MENDING",
+    LINK : "BATTLEREASONS.LINK",
+    LEECHING : "BATTLEREASONS.LEECHING",
+    BARRIER : "BATTLEREASONS.BARRIER",
+    REPULSE : "BATTLEREASONS.REPULSE",
+    SILENCED : "BATTLEREASONS.SILENCED",
+    VACUUM : "BATTLEREASONS.VACUUM",
+    UNMENDING : "BATTLEREASONS.UNMENDING",
+    SAP : "BATTLEREASONS.SAP",
+    SUREFOOTED : "BATTLEREASONS.SUREFOOTED",
+    FIRE : "BATTLEREASONS.FIRE",
+    EARTH : "BATTLEREASONS.EARTH",
+    WATER : "BATTLEREASONS.WATER",
+    AIR : "BATTLEREASONS.AIR",
+    HORSEDUNG : "BATTLEREASONS.HORSE DUNG",
+    LODESTONE : "BATTLEREASONS.LODESTONE",
+    MULTIPLICATION : "BATTLEREASONS.MULTIPLICATION",
+    COPPER : "BATTLEREASONS.COPPER",
+    LEAD : "BATTLEREASONS.LEAD",
+    IRON : "BATTLEREASONS.IRON",
+    REGULUSOFIRON : "BATTLEREASONS.REGULUSOFIRON",
+    SOUL : "BATTLEREASONS.SOUL",
+    CALCINATION : "BATTLEREASONS.CALCINATION",
+    FERMENTATION : "BATTLEREASONS.FERMENTATION",
 }
 
 const ELEMENTTYPES = {
-    FIRE : "Fire",
-    WATER : "Water",
-    EARTH : "Earth",
-    METAL : "Metal",
-    AIR : "Air",
-    NONE : "Void",
+    FIRE : "ELEMENTTYPES.FIRE",
+    WATER : "ELEMENTTYPES.WATER",
+    EARTH : "ELEMENTTYPES.EARTH",
+    METAL : "ELEMENTTYPES.METAL",
+    AIR : "ELEMENTTYPES.AIR",
+    NONE : "ELEMENTTYPES.NONE",
 };
 
 const CELLTYPES = {
-    FIRE : "red",
-    WATER : "blue",
-    EARTH : "gray",
-    WOOD : "green",
-    AIR : "yellow",
-    HEALING : "purple",
-    RAINBOW : "rainbow",
-    JAMMER : "black",
-    BOMB : "orange",
-    WILDCARD : "*",
+    FIRE : "CELLTYPES.FIRE",
+    WATER : "CELLTYPES.WATER",
+    EARTH : "CELLTYPES.EARTH",
+    WOOD : "CELLTYPES.WOOD",
+    AIR : "CELLTYPES.AIR",
+    HEALING : "CELLTYPES.HEALING",
+    RAINBOW : "CELLTYPES.RAINBOW",
+    JAMMER : "CELLTYPES.JAMMER",
+    BOMB : "CELLTYPES.BOMB",
+    WILDCARD : "CELLTYPES.WILDCARD",
 };
 
-const LOSEABLESTATS = {
+const LOSEABLESTATS = { // todo: replace like ones above
     INT : "intelligence",
     STAM : "stamina",
     POT : "potential",
@@ -94,7 +94,7 @@ const LOSEABLESTATS = {
     BOMB : "bombpower",
 }
 
-const DIRECTIONTYPES = {
+const DIRECTIONTYPES = { // todoL same
     UP : "Up",
     DOWN : "Down",
     LEFT : "Left",
@@ -198,6 +198,8 @@ const HOOKEDFUNCS = [
     "Skill.onActivate",
 ]
 
+HOOKEDFUNCS.sort();
+
 
 const CONDITIONTYPES = {
     Burning: "BATTLEREASONS.BURNING",
@@ -232,7 +234,7 @@ const CONDITIONTYPES = {
 }
 
 
-const TERRAINTYPES = {
+const TERRAINTYPES = {// todo: formatting
     Fire: BATTLEREASONS.FIRE,
     Earth: BATTLEREASONS.EARTH,
     Water: BATTLEREASONS.WATER,
@@ -563,10 +565,12 @@ const EFFECTFUNCTIONS = {
     DamageBearer : [
         { damageAmount: NUMBERTYPE, damageAmountFunc: FUNCTIONTYPE },
         { damageType: ELEMENTENUMTYPE },
+        {customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE}
     ],
     DamageTarget : [
         { damageAmount: NUMBERTYPE, damageAmountFunc: FUNCTIONTYPE },
         { damageType: ELEMENTENUMTYPE },
+        {customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE}
     ],
     InstantKillTarget : [],
     InstantKillBearer : [],
@@ -588,6 +592,144 @@ const EFFECTFUNCTIONS = {
         { mutationData: STRINGARRAYTYPE, mutationDataFunc: FUNCTIONTYPE },
     ],
     ReplaceCellRandomly: [
-
-    ] // todo: add optional params
+        {minBoundX: NUMBERTYPE},
+        {maxBoundX: NUMBERTYPE},
+        {minBoundY: NUMBERTYPE},
+        {maxBoundY: NUMBERTYPE},
+        {limit : NUMBERTYPE, limitFunc: FUNCTIONTYPE},
+        {newType: CELLENUMTYPE, newTypeFunc: FUNCTIONTYPE},
+    ],
+    ReplaceCellRow: [
+        {row: NUMBERTYPE, rowFunc: FUNCTIONTYPE},
+        {newType: CELLENUMTYPE, newTypeFunc: FUNCTIONTYPE},
+    ],
+    ReplaceCellColumn: [
+        {column: NUMBERTYPE, columnFunc: FUNCTIONTYPE},
+        {newType: CELLENUMTYPE, newTypeFunc: FUNCTIONTYPE},
+    ],
+    ReplaceCellType: [
+        {oldType: CELLENUMTYPE, oldTypeFunc: FUNCTIONTYPE},
+        {newType: CELLENUMTYPE, newTypeFunc: FUNCTIONTYPE},
+    ],
+    ManipulateArgsValue: [
+        { newValueFunc: FUNCTIONTYPE },
+    ],
+    ManipulateRawReturnValue: [
+        { newValueFunc: FUNCTIONTYPE },
+    ],
+    ManipulateReturnValue: [
+        { newValueFunc: FUNCTIONTYPE },
+    ],
+    ManipulateReturnValueAmount: [
+        { newAmountFunc: FUNCTIONTYPE },
+    ],
+    TriggerOnEffects: [
+        {onEffect: STRINGARRAYTYPE},
+        {params: STRINGARRAYTYPE, paramsFunc: FUNCTIONTYPE},
+    ],
+    BearerAcquiresPassive: [
+        { passiveName: STRINGTYPE},
+    ],
+    ChanceOf: [
+        { chance: NUMBERTYPE, chanceFunc: FUNCTIONTYPE },
+    ],
+    TargetNextTurn: [],
+    SummonFighter: [
+        {fighterTemplate: STRINGTYPE, fighterTemplateFunc: FUNCTIONTYPE},
+        {customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE},
+    ],
+    AcquireSkill: [
+        { skillName: STRINGTYPE, skillNameFunc: FUNCTIONTYPE },
+    ],
+    AcquireSkillTarget: [
+        { skillName: STRINGTYPE, skillNameFunc: FUNCTIONTYPE },
+    ],
+    DeactivateSkill: [
+        { skillName: STRINGTYPE, skillNameFunc: FUNCTIONTYPE },
+    ],
+    PlayBulletAtBearer: [
+        { bulletName: STRINGTYPE},
+        {category: ELEMENTENUMTYPE}
+    ],
+    PlayBulletAtTarget: [
+        { bulletName: STRINGTYPE},
+        {category: ELEMENTENUMTYPE}
+    ],
+    PlayBulletAtTargetCoord: [
+        { bulletName: STRINGTYPE},
+        {category: ELEMENTENUMTYPE},
+    ],
+    PassiveSetData: [
+        {setDataFunc: FUNCTIONTYPE},
+    ],
+    SkillSetData: [
+        {setDataFunc: FUNCTIONTYPE},
+    ],
+    PassiveCheckData: [
+        { checkDataFunc: FUNCTIONTYPE }
+    ],
+    SkillCheckData: [
+        { checkDataFunc: FUNCTIONTYPE }
+    ],
+    AddExtraTargets: [
+        {extraTargetFunc: FUNCTIONTYPE},
+    ],
+    ConvertCoordinateToFighter: [],
+    ConvertCoordinateToFighterOrMakeTerrain: [
+        { terrainTemplate: TERRAINENUMTYPE },
+        { terrainData: STRINGARRAYTYPE, terrainDataFunc: FUNCTIONTYPE }
+    ],
+    GiveTargetPassive: [
+        { passiveName: STRINGTYPE, passiveNameFunc: FUNCTIONTYPE },
+    ],
+    GiveBearerPassive: [
+        { passiveName: STRINGTYPE, passiveNameFunc: FUNCTIONTYPE },
+    ],
+    GiveTargetCustomPassive: [
+        {passiveTemplate: STRINGARRAYTYPE}
+    ],
+    GiveBearerCustomPassive: [
+        {passiveTemplate: STRINGARRAYTYPE}
+    ],
+    AttackTarget: [
+        {customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE},
+    ],
+    CastOnTarget: [
+        { skillName: STRINGTYPE, skillNameFunc: FUNCTIONTYPE },
+        { customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE },
+        { targetPoolFunc: FUNCTIONTYPE },
+    ],
+    CastOnBearer: [
+        { skillName: STRINGTYPE, skillNameFunc: FUNCTIONTYPE },
+        { customFlags: STRINGARRAYTYPE, customFlagsFunc: FUNCTIONTYPE },
+    ],
+    RemoveCustomPassiveTarget: [
+        { passive: STRINGTYPE }
+    ],
+    MoveTargetRandomly: [
+        {distance: NUMBERTYPE, distanceFunc: FUNCTIONTYPE},
+    ],
+    MoveBearerRandomly: [
+        {distance: NUMBERTYPE, distanceFunc: FUNCTIONTYPE},
+    ],
+    MoveBearer: [
+        {newXYFunc: FUNCTIONTYPE},
+    ],
+    MoveTarget: [
+        {newXYFunc: FUNCTIONTYPE},
+    ],
+    CannotBeManuallyCast: [],
+    MustBeManuallyCast: [],
+    CheckPriorConditionFunction:[], // todo, reference prior condition func
+    IncrementScore: [
+        { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
+    ],
+    BattleStateSetData: [
+        { setDataFunc: FUNCTIONTYPE },
+    ],
+    BattleStateCheckData: [
+        { checkDataFunc: FUNCTIONTYPE }
+    ],
+    MakePassiveNotStackable: [],
+    PassiveSectionNotStackCheck: [],
 }

@@ -84,7 +84,7 @@ function addFunctionBlock(schema, containerClass, attachmentDiv, renderFn) {
     <label>Function:
       <select class="funcSelect">
         <option value="">-- none --</option>
-        ${Object.keys(schema).map(fn=>
+        ${Object.keys(schema).sort().map(fn=>
           `<option value="${fn}">${fn}</option>`
         ).join('')}
       </select>
@@ -125,11 +125,13 @@ function renderPriorConditionFields(funcName, container) {
         input = document.createElement('textarea');
         input.rows=10; input.style.width='100%';
         input.value = `function(passive, params)\n\nend`;
+        input.noQuotes = true; // special case for string arrays
       } else if(type===NUMBERTYPE){
         input = document.createElement('input'); input.type='number';
       } else if(type===STRINGARRAYTYPE){
-        input = document.createElement('input');
-        input.placeholder='e.g. {"a","b"}';
+        input = document.createElement('textarea');
+        input.rows=10; input.style.width='100%';
+        input.value = `{}`;
         input.noQuotes = true; // special case for string arrays
       } else {
         // enums or string
@@ -166,11 +168,13 @@ function renderTargetFiltrationFields(funcName, container){
         input=document.createElement('textarea');
         input.rows=10; input.style.width='100%';
         input.value=`function(passive, params, targetPool) \n\nend`;
+        input.noQuotes = true; // special case for string arrays
       } else if(type===NUMBERTYPE){
         input=document.createElement('input'); input.type='number';
       } else if(type===STRINGARRAYTYPE){
-        input = document.createElement('input');
-        input.placeholder='e.g. {"a","b"}';
+        input = document.createElement('textarea');
+        input.rows=10; input.style.width='100%';
+        input.value = `{}`;
         input.noQuotes = true; // special case for string arrays
       } else {
         input=document.createElement(type.endsWith('ENUMTYPE')?'select':'input');
@@ -210,8 +214,9 @@ function renderEffectFields(funcName, container){
       } else if(type===NUMBERTYPE){
         input=document.createElement('input'); input.type='number';
       } else if(type===STRINGARRAYTYPE){
-        input = document.createElement('input');
-        input.placeholder='e.g. {"a","b"}';
+        input=document.createElement('textarea');
+        input.rows=10; input.style.width='100%';
+        input.value=`{}`;
         input.noQuotes = true; // special case for string arrays
       } else {
         input=document.createElement(type.endsWith('ENUMTYPE')?'select':'input');
@@ -312,7 +317,7 @@ const efLua = serializeList(
   }).join(',\n');
 
   const out =
-`return function()
+`return function() -- machine output
 return {
     passiveName = "${name}",
     passiveDescription = "${desc}",
