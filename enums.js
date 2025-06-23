@@ -80,26 +80,26 @@ const CELLTYPES = {
 };
 
 const LOSEABLESTATS = { // todo: replace like ones above
-    INT : "intelligence",
-    STAM : "stamina",
-    POT : "potential",
-    FIRE : "firepower",
-    WATER : "waterpower",
-    EARTH : "metalpower",
-    WOOD : "woodpower",
-    AIR : "airpower",
-    HEALING : "heartpower",
-    RAINBOW : "rainbowpower",
-    JAMMER : "jammerpower",
-    BOMB : "bombpower",
+    INT : "LOSEABLESTATS.INT",
+    STAM : "LOSEABLESTATS.STAM",
+    POT : "LOSEABLESTATS.POT",
+    FIRE : "LOSEABLESTATS.FIRE",
+    WATER : "LOSEABLESTATS.WATER",
+    EARTH : "LOSEABLESTATS.EARTH",
+    WOOD : "LOSEABLESTATS.WOOD",
+    AIR : "LOSEABLESTATS.AIR",
+    HEALING : "LOSEABLESTATS.HEALING",
+    RAINBOW : "LOSEABLESTATS.RAINBOW",
+    JAMMER : "LOSEABLESTATS.JAMMER",
+    BOMB : "LOSEABLESTATS.BOMB",
 }
 
 const DIRECTIONTYPES = { // todoL same
-    UP : "Up",
-    DOWN : "Down",
-    LEFT : "Left",
-    RIGHT : "Right",
-    NONE : "None",
+    UP : "DIRECTIONTYPES.UP",
+    DOWN : "DIRECTIONTYPES.DOWN",
+    LEFT : "DIRECTIONTYPES.LEFT",
+    RIGHT : "DIRECTIONTYPES.RIGHT",
+    NONE : "DIRECTIONTYPES.NONE",
 }
 
 const HOOKEDFUNCS = [
@@ -260,6 +260,7 @@ const STRINGTYPE = "STRINGTYPE";
 const STRINGARRAYTYPE = "STRINGARRAYTYPE";
 const CONDITIONENUMTYPE = "CONDITIONENUMTYPE";
 const TERRAINENUMTYPE = "TERRAINENUMTYPE";
+const LOSEABLESTATSTYPE = "LOSEABLESTATSTYPE";
 
 const ENUM_LISTS = {
   ELEMENTENUMTYPE: ELEMENTTYPES,
@@ -267,6 +268,7 @@ const ENUM_LISTS = {
   TERRAINENUMTYPE: TERRAINTYPES,
   CELLENUMTYPE: CELLTYPES,
   DIRECTIONENUMTYPE: DIRECTIONTYPES,
+  LOSEABLESTATSTYPE: LOSEABLESTATS,
 };
 
 const PRIORCONDITIONFUNCTIONS = {
@@ -406,7 +408,7 @@ const PRIORCONDITIONFUNCTIONS = {
     ParamsEventSuccess: [],
     ParamsEventFailure: [],
     ParamsStatType: [
-        { statType: STRINGTYPE }
+        { statType: LOSEABLESTATSTYPE }
     ],
     ParamsEffectName: [
         { effect: STRINGTYPE }
@@ -528,7 +530,7 @@ const EFFECTFUNCTIONS = {
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     CostStatEventTarget : [
-        { statType: STRINGTYPE, statTypeFunc: FUNCTIONTYPE },
+        { statType: LOSEABLESTATSTYPE, statTypeFunc: FUNCTIONTYPE },
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     CostStatEventSource : [

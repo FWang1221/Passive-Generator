@@ -129,6 +129,7 @@ function renderPriorConditionFields(funcName, container) {
         input.noQuotes = true; // special case for string arrays
       } else if(type===NUMBERTYPE){
         input = document.createElement('input'); input.type='number';
+        input.noQuotes = true; // special case for numbers
       } else if(type===STRINGARRAYTYPE){
         input = document.createElement('textarea');
         input.rows=10; input.style.width='100%';
@@ -172,6 +173,7 @@ function renderTargetFiltrationFields(funcName, container){
         input.noQuotes = true; // special case for string arrays
       } else if(type===NUMBERTYPE){
         input=document.createElement('input'); input.type='number';
+        input.noQuotes = true; // special case for numbers
       } else if(type===STRINGARRAYTYPE){
         input = document.createElement('textarea');
         input.rows=10; input.style.width='100%';
@@ -214,6 +216,7 @@ function renderEffectFields(funcName, container){
         input.noQuotes=true;
       } else if(type===NUMBERTYPE){
         input=document.createElement('input'); input.type='number';
+        input.noQuotes = true; // special case for numbers
       } else if(type===STRINGARRAYTYPE){
         input=document.createElement('textarea');
         input.rows=10; input.style.width='100%';
