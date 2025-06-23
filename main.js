@@ -23,6 +23,7 @@ function addAttachment() {
             style="position:absolute; top:0.5rem; right:0.5rem; background:#900; color:#fff; border:none; padding:0.2rem 0.5rem; cursor:pointer;">
       ×
     </button>
+    <br>
     <fieldset style="border:1px solid #555;padding:1rem;margin-bottom:1rem;">
       <legend>Attachment</legend>
       <!-- HOOKEDFUNC -->
