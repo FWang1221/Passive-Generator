@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passive Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Passive Designer</h1>
+
+  <label>
+    Passive Name:
+    <input type="text" id="passiveName" placeholder="e.g. Armor Peeler" />
+  </label>
+
+  <label>
+    Passive Description:
+    <input type="text" id="passiveDescription" placeholder="..." />
+  </label>
+
+  <h2>Attachments</h2>
+  <div id="attachmentsContainer"></div>
+  <button onclick="addAttachment()">+ Add Attachment</button>
+
+  <br><br>
+  <button onclick="generateLua()">Export to Lua</button>
+
+  <label>
+    Exported Lua:
+    <textarea id="exportBox" rows="20" readonly></textarea>
+  </label>
+<script src=" https://cdn.jsdelivr.net/npm/luaparse@0.3.1/luaparse.min.js "></script>
+<script>
+  // validate any FUNCTIONTYPE textarea on input
+  document.addEventListener('input', e => {
+    if (e.target.tagName==='TEXTAREA' && e.target.dataset.key) {
+      try {
+        // try parse as a chunk
+        luaparse.parse("local testThing = " + e.target.value, {luaVersion: '5.1'});
+        e.target.style.borderColor = ''; // valid
+      } catch(err) {
+        e.target.style.borderColor = 'red'; // mark invalid
+      }
+    }
+  });
+</script>
+  <script src="enums.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

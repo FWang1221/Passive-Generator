@@ -1,0 +1,21 @@
+body {
+    font-family: monospace;
+    background: #1e1e1e;
+    color: #dcdcdc;
+    padding: 2rem;
+}
+input, textarea, button {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #2e2e2e;
+    color: #dcdcdc;
+    border: 1px solid #555;
+    font-family: inherit;
+}
+button {
+    cursor: pointer;
+    background: #3e3e3e;
+    border: 1px solid #777;
+}
