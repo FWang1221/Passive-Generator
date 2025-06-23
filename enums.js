@@ -235,20 +235,20 @@ const CONDITIONTYPES = {
 
 
 const TERRAINTYPES = {// todo: formatting
-    Fire: BATTLEREASONS.FIRE,
-    Earth: BATTLEREASONS.EARTH,
-    Water: BATTLEREASONS.WATER,
-    Air: BATTLEREASONS.AIR,
-    HorseDung: BATTLEREASONS.HORSEDUNG,
-    Lodestone: BATTLEREASONS.LODESTONE,
-    Multiplication: BATTLEREASONS.MULTIPLICATION,
-    Copper: BATTLEREASONS.COPPER,
-    Lead: BATTLEREASONS.LEAD,
-    Iron: BATTLEREASONS.IRON,
-    RegulusOfIron: BATTLEREASONS.REGULUSOFIRON,
-    Soul: BATTLEREASONS.SOUL,
-    Calcination: BATTLEREASONS.CALCINATION,
-    Fermentation: BATTLEREASONS.FERMENTATION,
+    Fire: "BATTLEREASONS.FIRE",
+    Earth: "BATTLEREASONS.EARTH",
+    Water: "BATTLEREASONS.WATER",
+    Air: "BATTLEREASONS.AIR",
+    HorseDung: "BATTLEREASONS.HORSEDUNG",
+    Lodestone: "BATTLEREASONS.LODESTONE",
+    Multiplication: "BATTLEREASONS.MULTIPLICATION",
+    Copper: "BATTLEREASONS.COPPER",
+    Lead: "BATTLEREASONS.LEAD",
+    Iron: "BATTLEREASONS.IRON",
+    RegulusOfIron: "BATTLEREASONS.REGULUSOFIRON",
+    Soul: "BATTLEREASONS.SOUL",
+    Calcination: "BATTLEREASONS.CALCINATION",
+    Fermentation: "BATTLEREASONS.FERMENTATION",
 }
 
 const FUNCTIONTYPE = "FUNCTIONTYPE";
@@ -260,7 +260,8 @@ const STRINGTYPE = "STRINGTYPE";
 const STRINGARRAYTYPE = "STRINGARRAYTYPE";
 const CONDITIONENUMTYPE = "CONDITIONENUMTYPE";
 const TERRAINENUMTYPE = "TERRAINENUMTYPE";
-const LOSEABLESTATSTYPE = "LOSEABLESTATSTYPE";
+const LOSEABLESTATSENUMTYPE = "LOSEABLESTATSENUMTYPE";
+const BATTLEREASONENUMTYPE = "BATTLEREASONENUMTYPE";
 
 const ENUM_LISTS = {
   ELEMENTENUMTYPE: ELEMENTTYPES,
@@ -268,7 +269,8 @@ const ENUM_LISTS = {
   TERRAINENUMTYPE: TERRAINTYPES,
   CELLENUMTYPE: CELLTYPES,
   DIRECTIONENUMTYPE: DIRECTIONTYPES,
-  LOSEABLESTATSTYPE: LOSEABLESTATS,
+  LOSEABLESTATSENUMTYPE: LOSEABLESTATS,
+  BATTLEREASONENUMTYPE: BATTLEREASONS,
 };
 
 const PRIORCONDITIONFUNCTIONS = {
@@ -408,16 +410,16 @@ const PRIORCONDITIONFUNCTIONS = {
     ParamsEventSuccess: [],
     ParamsEventFailure: [],
     ParamsStatType: [
-        { statType: LOSEABLESTATSTYPE }
+        { statType: LOSEABLESTATSENUMTYPE }
     ],
     ParamsEffectName: [
         { effect: STRINGTYPE }
     ],
     ParamsReasonName: [
-        { reason: STRINGTYPE }
+        { reason: BATTLEREASONENUMTYPE }
     ],
     ParamsNotReasonName: [
-        { reason: STRINGTYPE }
+        { reason: BATTLEREASONENUMTYPE }
     ],
     ParamsHasFlag: [
         { flagName: STRINGTYPE }
@@ -526,19 +528,19 @@ const TARGETFILTRATIONFUNCTIONS = {
 const EFFECTFUNCTIONS = {
     NoEffect : [],
     CostStatBearer : [
-        { statType: STRINGTYPE, statTypeFunc: FUNCTIONTYPE },
+        { statType: LOSEABLESTATSENUMTYPE, statTypeFunc: FUNCTIONTYPE },
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     CostStatEventTarget : [
-        { statType: LOSEABLESTATSTYPE, statTypeFunc: FUNCTIONTYPE },
+        { statType: LOSEABLESTATSENUMTYPE, statTypeFunc: FUNCTIONTYPE },
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     CostStatEventSource : [
-        { statType: STRINGTYPE, statTypeFunc: FUNCTIONTYPE },
+        { statType: LOSEABLESTATSENUMTYPE, statTypeFunc: FUNCTIONTYPE },
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     CostStatTarget : [
-        { statType: STRINGTYPE, statTypeFunc: FUNCTIONTYPE },
+        { statType: LOSEABLESTATSENUMTYPE, statTypeFunc: FUNCTIONTYPE },
         { amount: NUMBERTYPE, amountFunc: FUNCTIONTYPE },
     ],
     AfflictConditionTarget : [
